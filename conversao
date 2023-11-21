@@ -1,0 +1,54 @@
+package main
+
+import (
+	"fmt"
+)
+
+func celsiusToFahrenheit(c float64) float64 {
+	return (c * 9 / 5) + 32
+}
+
+func fahrenheitToCelsius(f float64) float64 {
+	return (f - 32) * 5 / 9
+}
+
+func celsiusToKelvin(c float64) float64 {
+	return c + 273.15
+}
+
+func kelvinToCelsius(k float64) float64 {
+	return k - 273.15
+}
+
+func fahrenheitToKelvin(f float64) float64 {
+	return (f - 32) * 5 / 9 + 273.15
+}
+
+func kelvinToFahrenheit(k float64) float64 {
+	return (k-273.15)*9/5 + 32
+}
+
+func main() {
+	// Exemplos de conversão
+	celsius := 25.0
+	fahrenheit := 98.6
+	kelvin := 298.15
+
+	// Convertendo Celsius para Fahrenheit
+	fmt.Printf("%.2f°C em Fahrenheit é %.2f°F\n", celsius, celsiusToFahrenheit(celsius))
+
+	// Convertendo Fahrenheit para Celsius
+	fmt.Printf("%.2f°F em Celsius é %.2f°C\n", fahrenheit, fahrenheitToCelsius(fahrenheit))
+
+	// Convertendo Celsius para Kelvin
+	fmt.Printf("%.2f°C em Kelvin é %.2fK\n", celsius, celsiusToKelvin(celsius))
+
+	// Convertendo Kelvin para Celsius
+	fmt.Printf("%.2fK em Celsius é %.2f°C\n", kelvin, kelvinToCelsius(kelvin))
+
+	// Convertendo Fahrenheit para Kelvin
+	fmt.Printf("%.2f°F em Kelvin é %.2fK\n", fahrenheit, fahrenheitToKelvin(fahrenheit))
+
+	// Convertendo Kelvin para Fahrenheit
+	fmt.Printf("%.2fK em Fahrenheit é %.2f°F\n", kelvin, kelvinToFahrenheit(kelvin))
+}
