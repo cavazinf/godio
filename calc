@@ -1,8 +1,4 @@
 
-Claro, vou apresentar um exemplo simples de uma calculadora básica em Go, que realiza operações de adição, subtração, multiplicação e divisão.
-
-go
-Copy code
 package main
 
 import (
