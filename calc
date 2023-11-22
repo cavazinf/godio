@@ -1,0 +1,63 @@
+
+Claro, vou apresentar um exemplo simples de uma calculadora básica em Go, que realiza operações de adição, subtração, multiplicação e divisão.
+
+go
+Copy code
+package main
+
+import (
+	"fmt"
+)
+
+func adicao(a, b float64) float64 {
+	return a + b
+}
+
+func subtracao(a, b float64) float64 {
+	return a - b
+}
+
+func multiplicacao(a, b float64) float64 {
+	return a * b
+}
+
+func divisao(a, b float64) float64 {
+	if b == 0 {
+		fmt.Println("Erro: divisão por zero não é permitida")
+		return 0
+	}
+	return a / b
+}
+
+func main() {
+	var num1, num2 float64
+	var operacao string
+
+	fmt.Print("Digite o primeiro número: ")
+	fmt.Scanln(&num1)
+
+	fmt.Print("Digite o segundo número: ")
+	fmt.Scanln(&num2)
+
+	fmt.Print("Escolha a operação (+, -, *, /): ")
+	fmt.Scanln(&operacao)
+
+	var resultado float64
+
+	switch operacao {
+	case "+":
+		resultado = adicao(num1, num2)
+	case "-":
+		resultado = subtracao(num1, num2)
+	case "*":
+		resultado = multiplicacao(num1, num2)
+	case "/":
+		resultado = divisao(num1, num2)
+	default:
+		fmt.Println("Operação inválida")
+		return
+	}
+
+	fmt.Printf("Resultado: %.2f\n", resultado)
+}
+Este código define funções para realizar cada operação matemática básica (adição, subtração, multiplicação e divisão). O programa solicita ao usuário dois números e a operação desejada, e então executa a operação correspondente e exibe o resultado.
