@@ -1,0 +1,94 @@
+Exemplo 1: Encontrar o Máximo entre Dois Números
+go
+Copy code
+package main
+
+import (
+	"fmt"
+)
+
+func max(a, b int) int {
+	if a > b {
+		return a
+	}
+	return b
+}
+
+func main() {
+	num1 := 20
+	num2 := 35
+
+	resultado := max(num1, num2)
+	fmt.Println("O máximo entre", num1, "e", num2, "é:", resultado)
+}
+Exemplo 2: Fatorial de um Número
+go
+Copy code
+package main
+
+import (
+	"fmt"
+)
+
+func fatorial(n int) int {
+	if n <= 1 {
+		return 1
+	}
+	return n * fatorial(n-1)
+}
+
+func main() {
+	num := 5
+
+	resultado := fatorial(num)
+	fmt.Println("O fatorial de", num, "é:", resultado)
+}
+Exemplo 3: Soma dos N primeiros números naturais
+go
+Copy code
+package main
+
+import (
+	"fmt"
+)
+
+func somaPrimeirosNaturais(n int) int {
+	return n * (n + 1) / 2
+}
+
+func main() {
+	num := 10
+
+	resultado := somaPrimeirosNaturais(num)
+	fmt.Println("A soma dos", num, "primeiros números naturais é:", resultado)
+}
+Exemplo 4: Verificar se um número é primo
+go
+Copy code
+package main
+
+import (
+	"fmt"
+)
+
+func ehPrimo(num int) bool {
+	if num <= 1 {
+		return false
+	}
+	for i := 2; i*i <= num; i++ {
+		if num%i == 0 {
+			return false
+		}
+	}
+	return true
+}
+
+func main() {
+	num := 17
+
+	if ehPrimo(num) {
+		fmt.Println(num, "é um número primo.")
+	} else {
+		fmt.Println(num, "não é um número primo.")
+	}
+}
